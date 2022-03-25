@@ -13,6 +13,11 @@
 		7DB70D3427ED569C00511B25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB70D3227ED569C00511B25 /* Main.storyboard */; };
 		7DB70D3627ED56A100511B25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB70D3527ED56A100511B25 /* Assets.xcassets */; };
 		7DB70D3927ED56A100511B25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB70D3727ED56A100511B25 /* LaunchScreen.storyboard */; };
+		7DB70D4427ED56FB00511B25 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB70D4327ED56FB00511B25 /* ViewModel.swift */; };
+		7DB70D4727ED573B00511B25 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB70D4627ED573B00511B25 /* Model.swift */; };
+		7DB70D4927ED575100511B25 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB70D4827ED575100511B25 /* PersistenceService.swift */; };
+		7DB70D4B27ED575D00511B25 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB70D4A27ED575D00511B25 /* APIClient.swift */; };
+		7DB70D4E27ED5C5300511B25 /* UIDependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB70D4D27ED5C5300511B25 /* UIDependencyInjector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		7DB70D3527ED56A100511B25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DB70D3827ED56A100511B25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DB70D3A27ED56A100511B25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DB70D4327ED56FB00511B25 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7DB70D4627ED573B00511B25 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7DB70D4827ED575100511B25 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		7DB70D4A27ED575D00511B25 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7DB70D4D27ED5C5300511B25 /* UIDependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDependencyInjector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		7DB70D2B27ED569C00511B25 /* MVVM_Combine */ = {
 			isa = PBXGroup;
 			children = (
+				7DB70D4227ED56D900511B25 /* UI */,
+				7DB70D4027ED56C900511B25 /* Services */,
 				7DB70D2C27ED569C00511B25 /* AppDelegate.swift */,
 				7DB70D2E27ED569C00511B25 /* SceneDelegate.swift */,
-				7DB70D3027ED569C00511B25 /* ViewController.swift */,
 				7DB70D3227ED569C00511B25 /* Main.storyboard */,
 				7DB70D3527ED56A100511B25 /* Assets.xcassets */,
 				7DB70D3727ED56A100511B25 /* LaunchScreen.storyboard */,
 				7DB70D3A27ED56A100511B25 /* Info.plist */,
 			);
 			path = MVVM_Combine;
+			sourceTree = "<group>";
+		};
+		7DB70D4027ED56C900511B25 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7DB70D4827ED575100511B25 /* PersistenceService.swift */,
+				7DB70D4C27ED576700511B25 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7DB70D4227ED56D900511B25 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7DB70D4D27ED5C5300511B25 /* UIDependencyInjector.swift */,
+				7DB70D4527ED571500511B25 /* Models */,
+				7DB70D3027ED569C00511B25 /* ViewController.swift */,
+				7DB70D4327ED56FB00511B25 /* ViewModel.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7DB70D4527ED571500511B25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DB70D4627ED573B00511B25 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7DB70D4C27ED576700511B25 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7DB70D4A27ED575D00511B25 /* APIClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB70D4E27ED5C5300511B25 /* UIDependencyInjector.swift in Sources */,
+				7DB70D4727ED573B00511B25 /* Model.swift in Sources */,
+				7DB70D4B27ED575D00511B25 /* APIClient.swift in Sources */,
+				7DB70D4927ED575100511B25 /* PersistenceService.swift in Sources */,
 				7DB70D3127ED569C00511B25 /* ViewController.swift in Sources */,
 				7DB70D2D27ED569C00511B25 /* AppDelegate.swift in Sources */,
+				7DB70D4427ED56FB00511B25 /* ViewModel.swift in Sources */,
 				7DB70D2F27ED569C00511B25 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

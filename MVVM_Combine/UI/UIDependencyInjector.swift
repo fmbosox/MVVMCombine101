@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+enum UIDependencyInjector {
+    static func getViewModelForHome() -> ViewModel {
+        return ViewModel()
+    }
+}
